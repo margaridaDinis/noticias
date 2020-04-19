@@ -6,7 +6,11 @@ import Colors from '../../../constants/Colors';
 
 const Categories = ({ categories = [] }) => {
   return (
-    <Text tag="small" paddingBottom={GUTTER / 2} color={Colors.tintColor}>
+    <Text
+      tag="small"
+      paddingBottom={GUTTER / 2}
+      color={Colors.tintColor}
+      testID="categories">
       {categories.join(', ')}
     </Text>
   );

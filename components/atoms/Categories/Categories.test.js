@@ -1,19 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Text from '../Text';
-import { GUTTER } from '../../../constants/Layout';
-import Colors from '../../../constants/Colors';
+import { render } from '@testing-library/react-native';
+import Categories from './Categories';
 
-const Categories = ({ categories = [] }) => {
-  return (
-    <Text tag="small" paddingBottom={GUTTER / 2} color={Colors.tintColor}>
-      {categories.join(', ')}
-    </Text>
-  );
-};
+describe('<Categories />', () => {
+  it('joins each category with comma', () => {
+    const { queryByText } = render(
+      <Categories categories={['one', 'two', 'three']} />,
+    );
 
-Categories.propTypes = {
-  categories: PropTypes.array,
-};
+    expect(queryByText('one, two, three')).toBeTruthy();
+  });
 
-export default Categories;
+  it('renders nothing, if there are no categories', () => {
+    const { queryByTestId, rerender } = render(<Categories />);
+
+    expect(queryByTestId('categories').props.children).toBe('');
+
+    rerender(<Categories categories={[]} />);
+    expect(queryByTestId('categories').props.children).toBe('');
+  });
+});
