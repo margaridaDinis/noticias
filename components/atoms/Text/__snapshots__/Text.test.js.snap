@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> renders with as bold 1`] = `
+Array [
+  Object {
+    "fontWeight": "bold",
+  },
+  Object {
+    "fontSize": 16,
+    "fontWeight": "normal",
+    "lineHeight": 24,
+  },
+  Object {
+    "fontWeight": "bold",
+  },
+]
+`;
+
+exports[`<Text /> renders with custom padding bottom 1`] = `
+Array [
+  Object {
+    "fontWeight": "bold",
+  },
+  Object {
+    "fontSize": 16,
+    "fontWeight": "normal",
+    "lineHeight": 24,
+  },
+  Object {
+    "paddingBottom": 16,
+  },
+]
+`;
+
+exports[`<Text /> renders with custom style 1`] = `
+Array [
+  Object {
+    "fontWeight": "bold",
+  },
+  Object {
+    "fontSize": 16,
+    "fontWeight": "normal",
+    "lineHeight": 24,
+  },
+  Object {
+    "textTransform": "uppercase",
+  },
+]
+`;
+
+exports[`<Text /> renders with different tag 1`] = `
+Array [
+  Object {
+    "fontWeight": "bold",
+  },
+  Object {
+    "fontSize": 28,
+  },
+]
+`;
+
+exports[`<Text /> renders without props 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessibilityRole="text"
+      style={
+        Array [
+          Object {
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+            "lineHeight": 24,
+          },
+        ]
+      }
+    >
+      Text
+    </Text>
+  </View>
+</View>
+`;

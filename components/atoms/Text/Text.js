@@ -12,21 +12,20 @@ const Text = ({
   bold,
   style,
   ...rest
-}) => (
-  <Txt
-    style={[
-      styles.general,
-      styles[tag],
-      bold && styles.bold,
-      color && { color },
-      paddingBottom && { paddingBottom },
-      style,
-    ]}
-    {...rest}
-  >
-    {children}
-  </Txt>
-);
+}) => {
+  const textStyles = [styles.general, styles[tag]];
+
+  if (bold) textStyles.push(styles.bold);
+  if (color) textStyles.push({ color });
+  if (paddingBottom) textStyles.push({ paddingBottom });
+  if (style) textStyles.push(style);
+
+  return (
+    <Txt style={textStyles} accessibilityRole="text" {...rest}>
+      {children}
+    </Txt>
+  );
+};
 
 Text.propTypes = {
   children: PropTypes.oneOfType([
