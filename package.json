@@ -36,6 +36,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "babel-preset-expo": "~8.0.0",
@@ -47,6 +49,7 @@
   "private": true,
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "pretty-quick --staged"
     }
   }
