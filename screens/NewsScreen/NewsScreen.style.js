@@ -4,11 +4,11 @@ import { GUTTER } from '../../constants/Layout';
 
 const styles = StyleSheet.create({
   loader: {
-    padding: GUTTER
+    padding: GUTTER,
   },
   header: {
     padding: GUTTER,
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   container: {
     flex: 1,
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   },
   separator: {
     height: 1,
-    backgroundColor: Colors.borderColor
-  }
+    backgroundColor: Colors.borderColor,
+  },
 });
 
-export default styles
+export default styles;

@@ -15,7 +15,7 @@ export const FONT_SIZE = {
   h4: BASE_FONT_SIZE * 1.125, // 18
   h5: BASE_FONT_SIZE, // 16
   h6: BASE_FONT_SIZE * 0.875, // 14,
-  small: BASE_FONT_SIZE * 0.875
+  small: BASE_FONT_SIZE * 0.875,
 };
 export const BASE_LINE_HEIGHT = BASE_FONT_SIZE * 1.5;
 
@@ -35,7 +35,7 @@ export const shadow = {
   shadowRadius: 4,
   shadowColor: Colors.black,
   shadowOffset: {
-    height: 5
+    height: 5,
   },
-  zIndex: 1
+  zIndex: 1,
 };

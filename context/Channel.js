@@ -1,4 +1,4 @@
-import React, {useReducer } from 'react'
+import React, { useReducer } from 'react';
 
 export const CHANGE_COUNTRY = 'CHANGE_COUNTRY';
 export const CHANGE_CHANNEL_URL = 'CHANGE_CHANNEL_URL';

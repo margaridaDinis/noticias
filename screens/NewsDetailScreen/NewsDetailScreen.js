@@ -7,7 +7,13 @@ import Categories from '../../components/atoms/Categories';
 import Colors from '../../constants/Colors';
 
 const NewsDetailScreen = ({ route, navigation }) => {
-  const { title = '', description = '', categories = [], published, url } = route?.params?.item;
+  const {
+    title = '',
+    description = '',
+    categories = [],
+    published,
+    url,
+  } = route?.params?.item;
 
   const openLinkInBrowser = useCallback(async () => {
     const supported = await Linking.canOpenURL(url);
@@ -15,32 +21,41 @@ const NewsDetailScreen = ({ route, navigation }) => {
     if (supported) {
       await Linking.openURL(url);
     } else {
-      Alert.alert('Algo correu mal!', `Não foi possível abrir esta notícia no browser...`);
+      Alert.alert(
+        'Algo correu mal!',
+        'Não foi possível abrir esta notícia no browser...',
+      );
     }
   }, [url]);
 
-  navigation.setOptions({ headerTitle: title, headerRight: () => (
-    <TouchableOpacity onPress={openLinkInBrowser}>
-      <Ionicons size={FONT_SIZE.h2} name='md-open' color={Colors.white} style={{ paddingRight: GUTTER }}/>
-    </TouchableOpacity>
-  )});
+  navigation.setOptions({
+    headerTitle: title,
+    headerRight: () => (
+      <TouchableOpacity onPress={openLinkInBrowser}>
+        <Ionicons
+          size={FONT_SIZE.h2}
+          name="md-open"
+          color={Colors.white}
+          style={{ paddingRight: GUTTER }}
+        />
+      </TouchableOpacity>
+    ),
+  });
 
   return (
     <ScrollView style={{ padding: GUTTER }}>
       <Categories categories={categories} />
-      <Text tag='h1' paddingBottom={GUTTER}>{title}</Text>
+      <Text tag="h1" paddingBottom={GUTTER}>
+        {title}
+      </Text>
       <Text paddingBottom={GUTTER}>{description}</Text>
-      <Text
-        tag='small'
-        color={Colors.grey.base}>
+      <Text tag="small" color={Colors.grey.base}>
         {new Date(published).toLocaleString()}
       </Text>
     </ScrollView>
   );
 };
 
-NewsDetailScreen.propTypes = {
-
-};
+NewsDetailScreen.propTypes = {};
 
 export default NewsDetailScreen;

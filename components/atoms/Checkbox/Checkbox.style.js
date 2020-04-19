@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   label: {
     paddingLeft: GUTTER / 2,
     fontSize: FONT_SIZE.base,
-  }
+  },
 });
 
 export default styles;

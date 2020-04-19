@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { ActivityIndicator, FlatList, View } from 'react-native';
+import { ActivityIndicator, FlatList } from 'react-native';
 import * as rssParser from 'react-native-rss-parser';
 import parseNewsDetails from '../../../helpers/newsDetails';
 import { GUTTER } from '../../../constants/Layout';
@@ -15,23 +15,25 @@ function NewsList() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getNews = () => {
+  const getNews = useCallback(() => {
     setLoading(true);
 
     return fetch(channel.url)
-      .then((response) => response.text())
-      .then((responseData) => rssParser.parse(responseData))
-      .then((rss) => {
+      .then(response => response.text())
+      .then(responseData => rssParser.parse(responseData))
+      .then(rss => {
         setNews(rss.items);
         setLoading(false);
       });
-  };
+  }, [channel]);
 
   useEffect(() => {
     getNews();
-  }, [channel]);
+  }, [channel, getNews]);
 
-  if (loading) return <ActivityIndicator style={{ padding: GUTTER }} />;
+  if (loading) {
+    return <ActivityIndicator style={{ padding: GUTTER }} />;
+  }
 
   return (
     <FlatList
@@ -50,9 +52,11 @@ function NewsList() {
             description={parsedItem.description}
             categories={parsedItem.categories}
             date={parsedItem.published}
-            onPress={() => navigation.navigate('NewsDetail', { item: parsedItem })}
+            onPress={() =>
+              navigation.navigate('NewsDetail', { item: parsedItem })
+            }
           />
-        )
+        );
       }}
     />
   );

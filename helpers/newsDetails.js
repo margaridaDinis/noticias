@@ -11,5 +11,5 @@ export default function parseNewsDetails(item, country) {
   const published = new Date(item.published).toLocaleString();
   const url = item.links[0].url;
 
-  return {...item, title, description, categories, published, url };
-};
+  return { ...item, title, description, categories, published, url };
+}

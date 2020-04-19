@@ -9,16 +9,15 @@ import styles from './Checkbox.style';
 
 const ICON = 'ios-radio-button';
 
-const Checkbox = ({ value, label, isSelected, onSelect }) => {
+const Checkbox = ({ label, isSelected, onSelect }) => {
   return (
-    <TouchableOpacity
-      onPress={onSelect}
-      style={[styles.checkbox]}
-    >
-      <Ionicons size={FONT_SIZE.h2} name={`${ICON}-${isSelected ? 'on' : 'off'}`} color={Colors.tintColor}/>
-      <Text style={styles.label}>
-        {label}
-      </Text>
+    <TouchableOpacity onPress={onSelect} style={[styles.checkbox]}>
+      <Ionicons
+        size={FONT_SIZE.h2}
+        name={`${ICON}-${isSelected ? 'on' : 'off'}`}
+        color={Colors.tintColor}
+      />
+      <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );
 };

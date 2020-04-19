@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
     paddingVertical: GUTTER / 1.5,
     paddingHorizontal: GUTTER,
     flexDirection: 'row',
-    ...shadow
+    ...shadow,
   },
   title: {
-    flex: 1
+    flex: 1,
   },
   button: {
-    alignSelf: 'flex-end'
-  }
+    alignSelf: 'flex-end',
+  },
 });
 
 export default styles;

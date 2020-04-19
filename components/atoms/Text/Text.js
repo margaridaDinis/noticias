@@ -4,7 +4,15 @@ import { Text as Txt } from 'react-native';
 
 import styles from './Text.style';
 
-const Text = ({ children, tag = 'p', paddingBottom, color, bold, style, ...rest }) => (
+const Text = ({
+  children,
+  tag = 'p',
+  paddingBottom,
+  color,
+  bold,
+  style,
+  ...rest
+}) => (
   <Txt
     style={[
       styles.general,
@@ -12,10 +20,9 @@ const Text = ({ children, tag = 'p', paddingBottom, color, bold, style, ...rest 
       bold && styles.bold,
       color && { color },
       paddingBottom && { paddingBottom },
-      style
+      style,
     ]}
-    {...rest}
-  >
+    {...rest}>
     {children}
   </Txt>
 );
@@ -24,16 +31,13 @@ Text.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
-    PropTypes.array
+    PropTypes.array,
   ]),
   tag: PropTypes.string,
   bold: PropTypes.bool,
   color: PropTypes.string,
   paddingBottom: PropTypes.number,
-  style: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.object
-  ])
+  style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
 
 export default Text;

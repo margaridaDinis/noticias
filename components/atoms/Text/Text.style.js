@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   a: {
     textDecorationLine: 'underline',
-    fontWeight: 'normal'
+    fontWeight: 'normal',
   },
   small: {
     fontSize: FONT_SIZE.small,
@@ -20,26 +20,26 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
   },
   h1: {
-    fontSize: FONT_SIZE.h1 // 28
+    fontSize: FONT_SIZE.h1, // 28
   },
   h2: {
-    fontSize: FONT_SIZE.h2 // 24
+    fontSize: FONT_SIZE.h2, // 24
   },
   h3: {
-    fontSize: FONT_SIZE.h3 // 20
+    fontSize: FONT_SIZE.h3, // 20
   },
   h4: {
-    fontSize: FONT_SIZE.h4 // 18
+    fontSize: FONT_SIZE.h4, // 18
   },
   h5: {
-    fontSize: FONT_SIZE.h5 // 16
+    fontSize: FONT_SIZE.h5, // 16
   },
   h6: {
-    fontSize: FONT_SIZE.h6 // 14
+    fontSize: FONT_SIZE.h6, // 14
   },
   bold: {
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });
 
 export default styles;

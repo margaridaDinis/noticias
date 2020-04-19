@@ -12,18 +12,20 @@ export const stackStyles = {
   headerTitleAlign: 'center',
   headerTitleContainerStyle: {
     width: Platform.OS === 'ios' ? '60%' : '75%',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   headerBackTitleVisible: false,
 };
 
 const NewsStack = () => {
   return (
-    <Stack.Navigator
-      screenOptions={stackStyles}
-    >
-      <Stack.Screen name='News' component={NewsScreen} options={{ title: 'Notícias '}} />
-      <Stack.Screen name='NewsDetail' component={NewsDetailScreen} />
+    <Stack.Navigator screenOptions={stackStyles}>
+      <Stack.Screen
+        name="News"
+        component={NewsScreen}
+        options={{ title: 'Notícias ' }}
+      />
+      <Stack.Screen name="NewsDetail" component={NewsDetailScreen} />
     </Stack.Navigator>
   );
 };

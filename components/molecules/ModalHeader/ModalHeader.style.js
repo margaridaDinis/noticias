@@ -7,13 +7,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: GUTTER,
     backgroundColor: Colors.tintColor,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     flex: 1,
     paddingLeft: GUTTER,
-    textTransform: 'uppercase'
-  }
+    textTransform: 'uppercase',
+  },
 });
 
 export default styles;

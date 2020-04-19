@@ -29,7 +29,6 @@ export default function App(props) {
           ...Ionicons.font,
         });
       } catch (e) {
-        console.warn(e);
       } finally {
         setLoadingComplete(true);
         SplashScreen.hide();
@@ -37,14 +36,18 @@ export default function App(props) {
     }
 
     loadResourcesAndDataAsync();
-  }, []);
+  }, [getInitialState]);
 
-  if (!isLoadingComplete && !props.skipLoadingScreen) return null;
+  if (!isLoadingComplete && !props.skipLoadingScreen) {
+    return null;
+  }
 
   return (
     <View style={styles.container}>
-      {Platform.OS === 'ios' && <StatusBar barStyle='light-content' />}
-      <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
+      {Platform.OS === 'ios' && <StatusBar barStyle="light-content" />}
+      <NavigationContainer
+        ref={containerRef}
+        initialState={initialNavigationState}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Root" component={BottomTabNavigator} />
         </Stack.Navigator>

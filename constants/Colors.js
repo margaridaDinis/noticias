@@ -1,10 +1,9 @@
 const primaryColor = '#01579b';
-const secondaryColor = '#81d4fa';
 const grey = {
   light: '#eeeeee',
   medium: '#bdbdbd',
   base: '#9e9e9e',
-  dark: '#616161'
+  dark: '#616161',
 };
 const white = '#fafafa';
 const black = '#333';
@@ -16,7 +15,7 @@ export default {
   tabBar: grey.light,
   background: white,
   borderColor: '#e0e0e0',
-  errorBackground:'#bf360c',
+  errorBackground: '#bf360c',
   errorText: '#fff',
   warningBackground: '#ffc400',
   warningText: '#333',
@@ -24,5 +23,5 @@ export default {
   noticeText: '#fff',
   black,
   grey,
-  white
+  white,
 };

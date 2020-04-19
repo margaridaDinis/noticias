@@ -3,7 +3,7 @@ import Colors from '../../../constants/Colors';
 import { GUTTER, shadow } from '../../../constants/Layout';
 
 const title = {
-  textTransform: 'uppercase'
+  textTransform: 'uppercase',
 };
 
 const styles = StyleSheet.create({
@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
   },
   country: {
     ...title,
-    color: Colors.tintColor
+    color: Colors.tintColor,
   },
   network: {
     ...title,
-    color: Colors.grey.base
-  }
+    color: Colors.grey.base,
+  },
 });
 
 export default styles;

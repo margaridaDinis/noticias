@@ -8,21 +8,16 @@ import { Ionicons } from '@expo/vector-icons';
 import Text from '../../atoms/Text';
 import styles from './ModalHeader.style';
 
-const ModalHeader = ({ title, action, icon = 'ios-arrow-back'  }) => {
+const ModalHeader = ({ title, action, icon = 'ios-arrow-back' }) => {
   const navigation = useNavigation();
   const handlePress = action || navigation.goBack;
 
   return (
     <View style={styles.wrapper}>
       <TouchableOpacity onPress={handlePress}>
-        <Ionicons name={icon} color={Colors.white} size={FONT_SIZE.h1}/>
+        <Ionicons name={icon} color={Colors.white} size={FONT_SIZE.h1} />
       </TouchableOpacity>
-      <Text
-        color={Colors.white}
-        style={styles.title}
-        numberOfLines={1}
-        bold
-      >
+      <Text color={Colors.white} style={styles.title} numberOfLines={1} bold>
         {title}
       </Text>
     </View>
@@ -32,7 +27,7 @@ const ModalHeader = ({ title, action, icon = 'ios-arrow-back'  }) => {
 ModalHeader.propTypes = {
   title: PropTypes.string.isRequired,
   action: PropTypes.func,
-  icon: PropTypes.string
+  icon: PropTypes.string,
 };
 
 export default ModalHeader;
