@@ -28,9 +28,8 @@ describe('<Text />', () => {
   });
 
   it('renders with custom style', () => {
-    const { queryByRole } = render(
-      <Text style={{ textTransform: 'uppercase' }}>Text</Text>,
-    );
+    const style = { textTransform: 'uppercase' };
+    const { queryByRole } = render(<Text style={style}>Text</Text>);
 
     expect(queryByRole('text').props.style).toMatchSnapshot();
   });

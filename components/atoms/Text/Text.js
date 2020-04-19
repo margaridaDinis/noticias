@@ -15,10 +15,18 @@ const Text = ({
 }) => {
   const textStyles = [styles.general, styles[tag]];
 
-  if (bold) textStyles.push(styles.bold);
-  if (color) textStyles.push({ color });
-  if (paddingBottom) textStyles.push({ paddingBottom });
-  if (style) textStyles.push(style);
+  if (bold) {
+    textStyles.push(styles.bold);
+  }
+  if (color) {
+    textStyles.push({ color });
+  }
+  if (paddingBottom) {
+    textStyles.push({ paddingBottom });
+  }
+  if (style) {
+    textStyles.push(style);
+  }
 
   return (
     <Txt style={textStyles} accessibilityRole="text" {...rest}>
