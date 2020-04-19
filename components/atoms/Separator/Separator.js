@@ -14,6 +14,7 @@ const Separator = ({
       styles.separator,
       { backgroundColor: color, marginTop, marginBottom },
     ]}
+    testID="separator"
   />
 );
 
