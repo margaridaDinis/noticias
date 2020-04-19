@@ -10,7 +10,8 @@ const Categories = ({ categories = [] }) => {
       tag="small"
       paddingBottom={GUTTER / 2}
       color={Colors.tintColor}
-      testID="categories">
+      testID="categories"
+    >
       {categories.join(', ')}
     </Text>
   );

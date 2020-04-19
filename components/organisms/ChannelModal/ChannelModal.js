@@ -17,7 +17,8 @@ const ChannelModal = () => {
       <Modal
         presentationStyle="formSheet"
         animationType="slide"
-        visible={modalVisible}>
+        visible={modalVisible}
+      >
         <ModalHeader title="Mudar de secção" action={toggleModal} />
         <ChannelSelect closeModal={toggleModal} />
       </Modal>

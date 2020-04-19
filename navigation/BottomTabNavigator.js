@@ -16,7 +16,8 @@ export default function BottomTabNavigator({ navigation, route }) {
       tabBarOptions={{
         activeTintColor: Colors.tabIconSelected,
         inactiveTintColor: Colors.tabIconDefault,
-      }}>
+      }}
+    >
       <BottomTab.Screen
         name="News"
         component={NewsStack}

@@ -22,7 +22,8 @@ const Text = ({
       paddingBottom && { paddingBottom },
       style,
     ]}
-    {...rest}>
+    {...rest}
+  >
     {children}
   </Txt>
 );

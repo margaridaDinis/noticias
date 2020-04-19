@@ -11,7 +11,8 @@ const NewsScreen = () => {
       initialState={{
         country: PORTUGAL,
         channel: RSS_URL_PER_COUNTRY[PORTUGAL][0],
-      }}>
+      }}
+    >
       <ChannelModal />
       <NewsList />
     </ChannelProvider>

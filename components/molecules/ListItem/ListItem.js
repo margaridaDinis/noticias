@@ -26,7 +26,8 @@ const ListItem = ({
           tag="small"
           paddingBottom={GUTTER}
           color={Colors.grey.dark}
-          numberOfLines={3}>
+          numberOfLines={3}
+        >
           {description}
         </Text>
         <Text tag="small" color={Colors.grey.base}>
