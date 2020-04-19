@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Separator /> renders with custom backgroundColor 1`] = `
+Array [
+  Object {
+    "height": 1,
+  },
+  Object {
+    "backgroundColor": "gold",
+    "marginBottom": 0,
+    "marginTop": 0,
+  },
+]
+`;
+
+exports[`<Separator /> renders with custom margins 1`] = `
+Array [
+  Object {
+    "height": 1,
+  },
+  Object {
+    "backgroundColor": "#e0e0e0",
+    "marginBottom": 16,
+    "marginTop": 8,
+  },
+]
+`;
+
+exports[`<Separator /> renders without props 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 1,
+      },
+      Object {
+        "backgroundColor": "#e0e0e0",
+        "marginBottom": 0,
+        "marginTop": 0,
+      },
+    ]
+  }
+  testID="separator"
+/>
+`;
